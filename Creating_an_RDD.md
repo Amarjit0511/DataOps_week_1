@@ -14,9 +14,14 @@ We can also specify the partition size on our own:
 ``` spark 
 val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"),2)
 ```
-***To get a visual of the partitoned Array:***
+***To get a default view of the partitoned Array:***
 ```
 rdd1.glom().foreach(println)
+```
+
+***To get a understandable view of the partitioned data
+```
+rdd1.foreach(println)
 ```
 
 ### 2. Using External Dataset:
