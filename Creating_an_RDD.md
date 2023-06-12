@@ -122,3 +122,29 @@ Now after the RDD is there in place and we also have a schema where we can map t
 val df= spark.createDataFrame(rddtext.map(Row(_)), schema)
 df.show()
 ```
+
+## Converting a csvrdd back to DataFrame
+
+```
+val csvrdd=spark.read.csv("path to csv file").rdd
+```
+
+Now that the csvrdd file is created now we will create a schema for it to be mapped back into DataFrame
+
+```
+import org.apache.spark.sql.Row
+import org.apache.spark.sql.types._
+val schema=StryctType(Seq(
+    StructField("Col_1_name", DoubleType, nullable=true),
+    StrcutField("Col_2_name", DoubleType, nullable=true),
+    StructField("Col_3_name", DoubleType, nullable=true),
+    StructField("Col_4_name", DoubleType, nullable=true)
+    ))
+```
+
+Now that we have a schema in place, we will map the csvrdd to this schema:
+```
+val df=spark.createDataFrame(csvrdd.map(Row(_)), schema)
+df.show()
+```
+
