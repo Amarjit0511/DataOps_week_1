@@ -9,7 +9,9 @@ val data=spark.read.option("header", "true").csv("C:\Datasets\industry_sic.csv")
 ```
 val textColumn=data.select("Description")
 ```
-### Splitting the string into individual words
+***Here in the csv dataset used above, the column with string is "Description"
+
+### Splitting the string into individual words (Optional), can be avoided if the column has just single words
 ```
 import org.apache.spark.sql.function._
 val words=textColumn.select(explode(split(col("Description"), " ")).alias("word"))
