@@ -50,7 +50,7 @@ println("The number of elements in the RDD is" +rddtext)
 #### To convert csv into RDD:
 ```
 val rddcsv=spakr.read
-           .parquet(" path to csv file ")
+           .csv(" path to csv file ")
            .rdd
 ```
 
