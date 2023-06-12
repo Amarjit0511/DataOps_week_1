@@ -136,7 +136,7 @@ val header=csvrdd.first()
 ```
 
 ```
-val withoutHeader=csvrdd.filter(row => row1=header)
+val withoutHeader=csvrdd.filter(row => row!=header)
 ```
 
 Now that the csvrdd file is created now we will create a schema for it to be mapped back into DataFrame
