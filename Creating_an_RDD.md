@@ -19,7 +19,7 @@ val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", 
 rdd1.glom().foreach(println)
 ```
 
-***To get a understandable view of the partitioned data
+***To get a understandable view of the partitioned data***
 ```
 rdd1.foreach(println)
 ```
@@ -142,6 +142,11 @@ val header=csvrdd.first()
 
 ```
 val withoutHeader=csvrdd.filter(row => row!=header)
+```
+We can view the transformed rdd by:
+```
+val sample=withoutHeader.take(10)
+sample.foreach(println)
 ```
 
 Now that the csvrdd file is created now we will create a schema for it to be mapped back into DataFrame
