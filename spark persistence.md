@@ -25,4 +25,9 @@ It is similar to MEMORY_ONLY, just the difference is that it requires less memor
 It is similar to MEMORY_AND_DISK, just the difference is that it stores the data in MEMORY AND DISK both in a serialised manner. 
 
 #### DISK_ONLY
-This persistence level is used when the data is ***too large*** to be stored in the memory and the 
+This persistence level is used when the data is ***too large*** to be stored in the memory and the cost of recomputation is more. But using this level of persistence can result in slower performance. 
+
+#### OFF_HEAP
+This persistence level stores the RDD in native memory or any off-heap memory. This persistence level comes in handy when the RDD are too large to be stored in the JVM Heap memory. 
+
+
