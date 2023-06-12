@@ -104,6 +104,12 @@ val rddtext = spark.sparkContext.textFile(" path of the text file ")
 ```
 
 ***Define the schema for the DataFrame***
+
+First we will have to import necessary libraries
+```
+import org.apache.spark.sql.Row
+import org.apache.spark.sql.types._
+```
 ```
 val schema = StructType(Seq(StructField("Line", StringType, nullable = True)))
 ```
