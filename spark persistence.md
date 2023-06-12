@@ -30,4 +30,39 @@ This persistence level is used when the data is ***too large*** to be stored in 
 #### OFF_HEAP
 This persistence level stores the RDD in native memory or any off-heap memory. This persistence level comes in handy when the RDD are too large to be stored in the JVM Heap memory. 
 
+## Implementation:
+
+### Importing required libraries
+
+```
+import org.apache.spark.storage.StorageLevel
+```
+### Creating an RDD
+```
+val csvrdd=spark.read.csv("path of the csv file").rdd
+```
+
+### Persisting the RDD
+```
+csvrdd.persist()
+```
+we can also specifically mention the persistence level
+
+```
+csvrdd.persist(StorageLevel.MEMORY_ONLY)
+```
+
+***Now this persisted RDD will be kept in the memory block and will be used without the need of recomputation until unpersisted***
+
+Now say we want to perform some computations on the persisted data
+
+```
+val computation1 = csvrdd.filter(filter operation)
+val computation2=computation2.reduce(reduce operation)
+```
+***Finally to unpersist the RDD:***
+```
+csvrdd.unpersist()
+```
+
 
