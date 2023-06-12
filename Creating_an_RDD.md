@@ -3,7 +3,7 @@
 ### 1: Using Paralllize:
 A sequence, a list, or an array, etc can be converetd to an array by the paralleilise method:
 ```spark
-val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+val rdd1=spark.sparkContext.parallelize(Array[String]("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
 ```
 or 
 ```
