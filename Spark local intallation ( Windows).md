@@ -49,3 +49,9 @@ Step 2:
 mkdir spark 
 ```
 **Now extract the downloaded file to this spark directory**
+
+After the .tgz file has been extracted to the specific location, move to that specific directory and type the command 
+```
+spark-shell
+```
+
