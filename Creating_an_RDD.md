@@ -5,10 +5,14 @@ A sequence, a list, or an array, etc can be converetd to an array by the paralle
 ```spark
 val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
 ```
+or 
+```
+val rdd1=spark.sparkContext.parallelize(Seq("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"))
+```
 We can also specify the partition size on our own:
 
 ``` spark 
-val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")2)
+val rdd1=spark.sparkContext.parallelize(Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"),2)
 ```
 ***To get a visual of the partitoned Array:***
 ```
