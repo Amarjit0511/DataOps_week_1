@@ -129,6 +129,16 @@ df.show()
 val csvrdd=spark.read.csv("path to csv file").rdd
 ```
 
+#### Note: If the csv file had headers as well, it becomes necessary to remove the header else it will cause conflict with the schema of the DataFrame
+
+```
+val header=csvrdd.first()
+```
+
+```
+val withoutHeader=csvrdd.filter(row => row1=header)
+```
+
 Now that the csvrdd file is created now we will create a schema for it to be mapped back into DataFrame
 
 ```
