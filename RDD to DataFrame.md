@@ -64,3 +64,4 @@ val finalDataFrame=withoutHeader.toDF(columnNames: _*)
 ```
 finalDataFrame.show()
 ```
+![Screenshot 2023-06-13 063510](https://github.com/Amarjit0511/DataOps_week_1/assets/54772122/1a3ec9a9-3881-4b87-a402-4b65fd8d06ef)
