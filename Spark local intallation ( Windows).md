@@ -55,3 +55,4 @@ After the .tgz file has been extracted to the specific location, move to that sp
 spark-shell
 ```
 
+![Screenshot 2023-06-10 055012](https://github.com/Amarjit0511/DataOps_week_1/assets/54772122/718dfa46-2131-4ff5-9ac3-dfd0f1382b93)
