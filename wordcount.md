@@ -13,7 +13,7 @@ val textColumn=data.select("Description")
 
 ### Splitting the string into individual words (Optional), can be avoided if the column has just single words
 ```
-import org.apache.spark.sql.function._
+import org.apache.spark.sql.functions._
 val words=textColumn.select(explode(split(col("Description"), " ")).alias("word"))
 ```
 
