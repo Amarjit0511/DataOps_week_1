@@ -24,7 +24,7 @@ val spark=SparkSession.builder().appName("Batch_Spark_Jobs").getOrCreate()
 val csvData: DataFrame=spark.read.format("csv").option("header", "true").option("inferSchema", "true").load("C:\\Datasets\\London_Airport.csv")
 ```
 ```
-val jsonData: DataFrame=spark.read.format("csv").option("inferSchema", "true").load("C:\\Datasets\\tweets.json")
+val jsonData: DataFrame=spark.read.format("json").option("inferSchema", "true").load("C:\\Datasets\\tweets.json")
 ```
 ```
 val parquetData=spark.read.format("parquet").option("inferSchema", "true").load("C:\\Datasets\\val.parquet")
