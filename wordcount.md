@@ -25,3 +25,4 @@ val wordCount=words.groupBy("word").count()
 ```
 wordCount.show()
 ```
+![Screenshot 2023-06-16 010008](https://github.com/Amarjit0511/DataOps_week_1/assets/54772122/03f4d00a-0786-4992-a988-c13bbf8ee81c)
