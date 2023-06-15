@@ -21,7 +21,7 @@ val spark=SparkSession.builder().appName("Batch_Spark_Jobs").getOrCreate()
 
 ## Loading data of different formats
 ```
-val csvData: DataFrame=spark.read.format("csv").option("header", "true").option("inferSchema").load("C:\\Datasets\\London_Airport.csv")
+val csvData: DataFrame=spark.read.format("csv").option("header", "true").option("inferSchema", "true").load("C:\\Datasets\\London_Airport.csv")
 ```
 ```
 val jsonData: DataFrame=spark.read.format("csv").option("inferSchema", "true").load("C:\\Datasets\\tweets.json")
