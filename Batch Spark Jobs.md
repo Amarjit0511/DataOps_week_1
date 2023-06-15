@@ -35,7 +35,7 @@ val parquetData=spark.read.format("parquet").option("inferSchema", "true").load(
 csvData.createOrReplaceTempView("csvTable")
 ```
 ```
-jsonData.createOReplaceTempView("jsonTable")
+jsonData.createOrReplaceTempView("jsonTable")
 ```
 ```
 parquetData.createOrReplaceTempView("parquetTable")
